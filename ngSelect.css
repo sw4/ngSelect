@@ -1,0 +1,59 @@
+div.ngSelect{
+    display:inline-block;
+    height:100%;
+    width:100%;
+    position:relative;
+}
+.ngSelect ul{
+    display:block;
+    list-style:none;
+    margin:0;
+    padding:0;
+    border:1px solid #808080;
+    line-height:35px;
+    background:#000;
+}
+.ngSelect>ul{
+    height:100%;
+    width:100%;
+}
+
+.ngSelect li span{
+    display:inline-block;
+    position:relative;
+    height:100%;
+    width:100%;
+}
+.ngSelect li span:after{
+    display:inline-block;
+    content:'\f150';
+    position:absolute;
+    right:5px;
+    color:rgba(255,255,255,.3);
+    font-size:20px;
+    font-family:FontAwesome;
+}
+.ngSelect>ul>li:hover span:After{
+    color:rgba(255,255,255,.5);
+}
+.ngSelect ul ul{
+    border-top:none;
+    width:100%;
+    top:35px;
+    position:absolute;
+    display:none;
+    left:0;
+    z-index:999;
+    max-height:200px;
+    overflow-y:scroll;
+}
+.ngSelect ul ul.active{
+    display:block;
+}
+.ngSelect li{
+    padding:0 4px;
+    cursor:pointer;
+}
+.ngSelect ul ul li:hover{
+    background:rgba(255,255,255,.2);
+}
