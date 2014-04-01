@@ -4,7 +4,7 @@ ngSelect
 Angular Based Visually Customisable Select Input
 
 
-Requires jQuery, Angular.
+Requires jQuery, Angular, FontAwesome (optional CSS).
 
 To use, inglude `ngSelect.js` after Angular and jQuery in your page, as well as `ngSelect.css` in your `head`.
 
