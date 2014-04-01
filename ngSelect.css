@@ -1,17 +1,18 @@
+
 div.ngSelect{
     display:inline-block;
     height:100%;
     width:100%;
     position:relative;
+    color:white;
 }
 .ngSelect ul{
-    display:block;
     list-style:none;
     margin:0;
     padding:0;
     border:1px solid #808080;
     line-height:35px;
-    background:#000;
+    background:#000;    
 }
 .ngSelect>ul{
     height:100%;
@@ -19,16 +20,19 @@ div.ngSelect{
 }
 
 .ngSelect li span{
-    display:inline-block;
+    display:block;
     position:relative;
     height:100%;
     width:100%;
+    max-height:35px;
 }
 .ngSelect li span:after{
     display:inline-block;
+    transition:all .2s ease-in;    
     content:'\f150';
     position:absolute;
     right:5px;
+    top:0px;
     color:rgba(255,255,255,.3);
     font-size:20px;
     font-family:FontAwesome;
@@ -41,14 +45,16 @@ div.ngSelect{
     width:100%;
     top:35px;
     position:absolute;
-    display:none;
     left:0;
     z-index:999;
-    max-height:200px;
+    max-height:0;
+    opacity:0;
     overflow-y:scroll;
+    transition:all .25s ease-in;
 }
 .ngSelect ul ul.active{
-    display:block;
+    opacity:1;
+    max-height:200px;
 }
 .ngSelect li{
     padding:0 4px;
@@ -56,4 +62,8 @@ div.ngSelect{
 }
 .ngSelect ul ul li:hover{
     background:rgba(255,255,255,.2);
+}
+
+div.ngSelect select:disabled + ul{
+    color:rgba(255,255,255,.6);
 }
