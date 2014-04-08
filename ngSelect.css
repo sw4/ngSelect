@@ -13,13 +13,13 @@
 	padding:0 4px;
 }
 .ngSelect div, .ngSelect ul{	
-    border:1px solid #808080;	
+    border:1px solid #808080;
+    background:#161A24;	
 }
 .ngSelect ul{
     list-style:none;
     margin:0;
     padding:0;
-    background:#000;  
     border-top:none;
     width:100%;
     top:32px;
@@ -29,7 +29,7 @@
     max-height:0;
     opacity:0;
     overflow-y:scroll;
-    transition:all .25s ease-in;
+    transition:all .15s ease-in;
 }
 .ngSelect div:after{
     display:inline-block;
@@ -53,5 +53,8 @@
     background:rgba(255,255,255,.2);
 }
 .ngSelect select:disabled + div{
-    color:rgba(255,255,255,.2);
+    color:rgba(255,255,255,.4);
+}
+.ngSelect select:disabled + div:after{
+    content:'';
 }
